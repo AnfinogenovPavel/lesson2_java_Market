@@ -8,17 +8,18 @@ public class programma {
             market1.acceptToMarket(human);// запускаем их в магазин
         }
         System.out.println("Посетители магазина : "+market1.getActors());
-        System.out.println("Очередь : "+market1.getActors());
+
         for (Actor human: market1.getActors()){// покупатели становятся в очередь
             market1.takeInQueue(human);
         }
+        System.out.println("Очередь : "+market1.getQueue());
         while (!market1.getActors().isEmpty()){
 
             market1.update();
         }
 
         System.out.println("Посетители магазина : "+market1.getActors());
-        System.out.println("Очередь : "+market1.getActors());
+        System.out.println("Очередь : "+market1.getQueue());
 
     }
 }
